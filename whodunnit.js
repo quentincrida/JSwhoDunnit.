@@ -64,22 +64,45 @@
 //Suspect 3 is Mrs Peacock, because Colonel Mustard is only in the for loop block.
 
 //Episode 5
-const scenario = {
-  murderer: 'Miss Scarlet',
-  room: 'Kitchen',
-  weapon: 'Candle Stick'
-};
-
-const changeWeapon = function(newWeapon) {
-  scenario.weapon = newWeapon;
-}
-
-const declareWeapon = function() {
-  return `The weapon is the ${scenario.weapon}.`;
-}
-
-changeWeapon('Revolver');
-const verdict = declareWeapon();
-console.log(verdict);
+// const scenario = {
+//   murderer: 'Miss Scarlet',
+//   room: 'Kitchen',
+//   weapon: 'Candle Stick'
+// };
+//
+// const changeWeapon = function(newWeapon) {
+//   scenario.weapon = newWeapon;
+// }
+//
+// const declareWeapon = function() {
+//   return `The weapon is the ${scenario.weapon}.`;
+// }
+//
+// changeWeapon('Revolver');
+// const verdict = declareWeapon();
+// console.log(verdict);
 
 //Answer: I think there will be errors because the scenario is a constant, and we're trying to change those with new constant variables.
+
+//Episode 6
+let murderer = 'Colonel Mustard';
+
+const changeMurderer = function() {
+  murderer = 'Mr. Green';
+
+  const plotTwist = function() {
+    murderer = 'Mrs. White';
+  }
+
+  plotTwist();
+}
+
+const declareMurderer = function () {
+  return `The murderer is ${murderer}.`;
+}
+
+changeMurderer();
+const verdict = declareMurderer();
+console.log(verdict);
+
+//Mr Green, from the changeMurderer constant
