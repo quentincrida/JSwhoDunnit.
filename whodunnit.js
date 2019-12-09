@@ -85,19 +85,48 @@
 //Answer: I think there will be errors because the scenario is a constant, and we're trying to change those with new constant variables.
 
 //Episode 6
-let murderer = 'Colonel Mustard';
+// let murderer = 'Colonel Mustard';
+//
+// const changeMurderer = function() {
+//   murderer = 'Mr. Green';
+//
+//   const plotTwist = function() {
+//     murderer = 'Mrs. White';
+//   }
+//
+//   plotTwist();
+// }
+//
+// const declareMurderer = function () {
+//   return `The murderer is ${murderer}.`;
+// }
+//
+// changeMurderer();
+// const verdict = declareMurderer();
+// console.log(verdict);
+
+//Mr Green, from the changeMurderer constant
+
+//Episode 7
+let murderer = 'Professor Plum';
 
 const changeMurderer = function() {
   murderer = 'Mr. Green';
 
   const plotTwist = function() {
-    murderer = 'Mrs. White';
+    let murderer = 'Colonel Mustard';
+
+    const unexpectedOutcome = function() {
+      murderer = 'Miss Scarlet';
+    }
+
+    unexpectedOutcome();
   }
 
   plotTwist();
 }
 
-const declareMurderer = function () {
+const declareMurderer = function() {
   return `The murderer is ${murderer}.`;
 }
 
@@ -105,4 +134,4 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 
-//Mr Green, from the changeMurderer constant
+//Professor Plum
